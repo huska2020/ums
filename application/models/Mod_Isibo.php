@@ -7,7 +7,7 @@ class Mod_Isibo extends CI_Model
 		$data1 = array(
 			'usr_id' =>null,
 			'usr_username' => $uname,
-			'usr_password' => $password,
+			'usr_password' => $password, 
 			'usr_roles_id' => 2,
 			'usr_isibo' => $isibo
 		);
@@ -243,6 +243,37 @@ class Mod_Isibo extends CI_Model
 		$this->db->join('ums_category', 'ldr_category_code=cat_cotegory_code');
 		$this->db->join('ums_ubwishingizi', 'ldr_insurance=ubw_id');
 
+		$query = $this->db->get();
+
+		if ($query->num_rows()>0){
+			return $query->result();
+		}
+		else{
+			return false;
+		}
+	}
+
+	function amatangazoAll()
+	{
+		$this->db->select('*');
+		$this->db->from('ums_amatangazo');
+		$this->db->order_by('ama_id', 'DESC');
+		$query = $this->db->get();
+
+		if ($query->num_rows()>0){
+			return $query->result();
+		}
+		else{
+			return false;
+		}
+	}
+
+	function amatangazoOne($id)
+	{
+		$this->db->select('*');
+		$this->db->from('ums_amatangazo');
+		$this->db->join('ums_admin', 'ama_created_by=adm_user_id ');
+		$this->db->where('ama_id', $id);
 		$query = $this->db->get();
 
 		if ($query->num_rows()>0){

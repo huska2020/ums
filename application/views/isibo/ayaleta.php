@@ -224,7 +224,7 @@
                         <div class="widget widget-activity-five">
 
                             <div class="widget-heading">
-                                <h5 class=""> AMATANGAZO</h5>
+                                <h5 class=""> AMATANGAZO YOSE</h5>
 
                                 <div class="task-action">
                                     <div class="dropdown">
@@ -246,103 +246,23 @@
 
                                 <div class="mt-container mx-auto"  style="height: 470px; overflow: auto;">
                                     <div  class="timeline-line">
-                                        
-                                        <div class="item-timeline timeline-new" >
-                                            <div class="t-dot">
-                                                <div class="t-secondary" ><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></div>
-                                            </div>
-                                            <div class="t-content">
-                                                <div class="t-uppercontent">
-                                                    <h5 style="color:#000; font-weight:bold">Amabwiriza yasohotse yo kwirinda corona virus : <a href="javscript:void(0);"><span>Soma Itangazo</span></a></h5>
+                                        <?php
+                                        foreach ($amatangazo as $value) {
+                                            ?>
+                                            <div class="item-timeline timeline-new" >
+                                                <div class="t-dot">
+                                                    <div class="t-success"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></div>
                                                 </div>
-                                                <p style="color:#0f0999;font-weight:bold">27 Feb 2020, 12:00PM</p>
-                                            </div>
-                                        </div>
-
-                                        <div class="item-timeline timeline-new">
-                                            <div class="t-dot">
-                                                <div class="t-success"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></div>
-                                            </div>
-                                            <div class="t-content">
-                                                <div class="t-uppercontent">
-                                                    <h5 style="color:#000;font-weight:bold">Menya Aho urukingo rwa covid-19 ruri gutangirwa: <a href="javascript:void(0);"><span>Soma Itangazo</span></a></h5>
+                                                <div class="t-content">
+                                                    <div class="t-uppercontent">
+                                                        <h5 style="color:#000; font-weight:bold"><?=$value->ama_title?> : <br><a href="<?=base_url()?>isibo/soma/<?=$value->ama_id?>"><span>Soma Itangazo</span></a></h5>
+                                                    </div>
+                                                    <p style="color:#0f0999;font-weight:bold"><?=$value->ama_created_on?></p>
                                                 </div>
-                                                <p style="color:#0f0999;font-weight:bold">28 Feb 2020, 12:30PM</p>
                                             </div>
-                                        </div>
-                                         
-                                        <div class="item-timeline timeline-new" >
-                                            <div class="t-dot">
-                                                <div class="t-secondary" ><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-plus"><line x1="12" y1="5" x2="12" y2="19"></line><line x1="5" y1="12" x2="19" y2="12"></line></svg></div>
-                                            </div>
-                                            <div class="t-content">
-                                                <div class="t-uppercontent">
-                                                    <h5 style="color:#000;font-weight:bold">Itangazo Aho urukingo rwa covid-19 ruri gutangirwa: <a href="javascript:void(0);"><span>Soma Itangazo</span></a></h5>
-                                                </div>
-                                                <p style="color:#0f0999;font-weight:bold">28 Feb 2020, 12:30PM</p>
-                                            </div>
-                                        </div>
-
-                                        <div class="item-timeline timeline-new">
-                                            <div class="t-dot">
-                                                <div class="t-success"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-mail"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg></div>
-                                            </div>
-                                            <div class="t-content">
-                                                <div class="t-uppercontent">
-                                                    <h5 style="color:#000;font-weight:bold"> Aho umuganda usoza ukwezi gutaha uzabera: <a href="javascript:void(0);"><span>Soma Itangazo</span></a></h5>
-                                                </div>
-                                                <p style="color:#0f0999;font-weight:bold">28 Feb 2020, 2:40PM</p>
-                                            </div>
-                                        </div>
-
-                                        <div class="item-timeline timeline-new">
-                                            <div class="t-dot">
-                                                <div class="t-primary"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
-                                            </div>
-                                            <div class="t-content">
-                                                <div class="t-uppercontent">
-                                                    <h5 style="color:#000;font-weight:bold">Menya Aho urukingo rwa covid-19 ruri gutangirwa: <a href="javascript:void(0);"><span>Soma Itangazo</span></a></h5>
-                                                </div>
-                                                <p style="color:#0f0999;font-weight:bold">28 Feb 2020, 13:30PM</p>
-                                            </div>
-                                        </div>
-
-                                        <div class="item-timeline timeline-new">
-                                            <div class="t-dot">
-                                                <div class="t-danger"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-check"><polyline points="20 6 9 17 4 12"></polyline></svg></div>
-                                            </div>
-                                            <div class="t-content">
-                                                <div class="t-uppercontent">
-                                                    <h5>Menya Aho urukingo rwa covid-19 ruri gutangirwa: <a href="javascript:void(0);"><span>Soma Itangazo</span></a></h5>
-                                                </div>
-                                                <p>28 Feb 2020, 11:31PM</p>
-                                            </div>
-                                        </div>
-
-                                        <div class="item-timeline timeline-new">
-                                            <div class="t-dot">
-                                                <div class="t-warning"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline></svg></div>
-                                            </div>
-                                            <div class="t-content">
-                                                <div class="t-uppercontent">
-                                                    <h5>Menya Aho urukingo rwa covid-19 ruri gutangirwa: <a href="javascript:void(0);"><span>Soma Itangazo</span></a></h5>
-                                                </div>
-                                                <p>28 Feb 2020, 6:55PM</p>
-                                            </div>
-                                        </div>
-
-                                        <div class="item-timeline timeline-new">
-                                            <div class="t-dot">
-                                                <div class="t-dark"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-server"><rect x="2" y="2" width="20" height="8" rx="2" ry="2"></rect><rect x="2" y="14" width="20" height="8" rx="2" ry="2"></rect><line x1="6" y1="6" x2="6" y2="6"></line><line x1="6" y1="18" x2="6" y2="18"></line></svg></div>
-                                            </div>
-                                            <div class="t-content">
-                                                <div class="t-uppercontent">
-                                                    <h5>Server rebooted successfully</h5>
-                                                    <span class=""></span>
-                                                </div>
-                                                <p>06 Apr, 2020</p>
-                                            </div>
-                                        </div>                                      
+                                            <?php
+                                        }
+                                        ?>                                    
                                     </div>                                    
                                 </div>
 

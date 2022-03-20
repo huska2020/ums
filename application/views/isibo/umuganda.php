@@ -220,7 +220,7 @@
                                         <td><?=$value->umg_title?></td>
                                         <td><?=$value->umg_description?></td>
                                         <!--<td><?/*=$value->umg_place*/?></td>-->
-                                        <td><?php echo $value->umg_abagore+$value->umg_abagabo+$value->umg_urubyiruko; ?></td>
+                                        <td><?php echo $value->umg_abagore+$value->umg_abagabo; ?></td>
                                         <td><?=$value->umg_date?></td>
                                         <td><?=number_format($value->umg_agaciro).' Rwf';?></td>
                                         <td class="text-center"><a href="<?=base_url()?>isibo/amafoto/<?=$value->umg_id?>"><button class="btn btn-primary btn-sm">Amafoto</button></a> </td>

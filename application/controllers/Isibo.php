@@ -2,7 +2,7 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 
-class Isibo extends CI_Controller {
+class Isibo extends CI_Controller { 
 
 	public function __construct()
 	{
@@ -79,6 +79,17 @@ class Isibo extends CI_Controller {
 			redirect(base_url() . 'Login');
 		}
 	}
+	public function ibikorwa(){
+		$sessionData=$this->session->userdata('userid');
+		if($sessionData!="") {
+			$this->load->view('isibo/header');
+			$this->load->view('isibo/sidebar');
+			$this->load->view('isibo/ibikorwaBishya');
+			$this->load->view('isibo/footer');
+		}else {
+			redirect(base_url() . 'Login');
+		}
+	}
 	public function invoice(){
 		$sessionData=$this->session->userdata('userid');
 		if($sessionData!="") {
@@ -93,9 +104,23 @@ class Isibo extends CI_Controller {
 	public function ayaleta(){
 		$sessionData=$this->session->userdata('userid');
 		if($sessionData!="") {
+			$result['amatangazo'] = $this->Mod_Isibo->amatangazoAll();
 			$this->load->view('isibo/header');
 			$this->load->view('isibo/sidebar');
-			$this->load->view('isibo/ayaleta');
+			$this->load->view('isibo/ayaleta',$result);
+			$this->load->view('isibo/footer');
+		}else {
+			redirect(base_url() . 'Login');
+		}
+	}
+	public function soma($id){
+		$sessionData=$this->session->userdata('userid');
+		if($sessionData!="") {
+			$result['amatangazo'] = $this->Mod_Isibo->amatangazoAll();
+			$result['data'] = $this->Mod_Isibo->amatangazoOne($id);
+			$this->load->view('isibo/header');
+			$this->load->view('isibo/sidebar');
+			$this->load->view('isibo/somamatangazo',$result);
 			$this->load->view('isibo/footer');
 		}else {
 			redirect(base_url() . 'Login');
@@ -115,7 +140,7 @@ class Isibo extends CI_Controller {
 			$result = $this->Mod_Isibo->selectForAnn($sessionData);
 			$row = $result->row();
 			$isibo = $row->isibo_code;
-			$owner = $row->adm_id;
+			$owner = $sessionData;
 			$title = $this->input->post('title');
 			$body = $this->input->post('myTextarea');
 			$pic = "";
@@ -129,7 +154,7 @@ class Isibo extends CI_Controller {
 			$result = $this->Mod_Isibo->selectForAnn($sessionData);
 			$row = $result->row();
 			$isibo = $row->isibo_code;
-			$owner = $row->adm_id;
+			$owner = $sessionData;
             $datav = $this->upload->data();
 			$title = $this->input->post('title');
 			$body = $this->input->post('myTextarea');
@@ -155,6 +180,7 @@ class Isibo extends CI_Controller {
 	public function amatangazo(){
 		$sessionData=$this->session->userdata('userid');
 		if($sessionData!="") {
+			$result['amatangazo'] = $this->Mod_Isibo->amatangazoAll();
 			$result['data'] = $this->Mod_Isibo->selectAmatangazo();
 			$this->load->view('isibo/header');
 			$this->load->view('isibo/sidebar');
@@ -172,6 +198,7 @@ class Isibo extends CI_Controller {
 			$row = $result1->row();
 			$isibo = $row->isibo_code;
 
+			$result['amatangazo'] = $this->Mod_Isibo->amatangazoAll();
 			$result['data'] = $this->Mod_Isibo->selectIbyaranzwe($isibo);
 			$this->load->view('isibo/header');
 			$this->load->view('isibo/sidebar');
