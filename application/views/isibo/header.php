@@ -86,11 +86,11 @@
 						<a href="<?=base_url()?>isibo/amashuri"><i class="fas fa-graduation-cap" style="font-size:16px;color:blue;padding-left:0px"><span style="color:#000; padding-left:10px">Amashuri<span></i>  </a>
 						<a href="<?=base_url()?>isibo/amavuriro"><i class="fas fa-hospital" style="font-size:16px;color:orange;padding-left:0px"><span style="color:#000; padding-left:10px">Amavuriro<span></i>      </a>
 						<a href="<?=base_url()?>isibo/pharmacy"><i class="fas fa-plus-square" style="font-size:16px;color:green;padding-left:0px"><span style="color:#000; padding-left:10px">Pharmacy<span></i>     </a>
-						<a href="<?=base_url()?>isibo/restaurant"><i class="fas fa-hamburger" style="font-size:16px;color:#E85959;padding-left:0px"><span style="color:#000; padding-left:10px">Restaurent<span></i>    </a>
+						<a href="<?=base_url()?>isibo/restaurent"><i class="fas fa-hamburger" style="font-size:16px;color:#E85959;padding-left:0px"><span style="color:#000; padding-left:10px">Restaurent<span></i>    </a>
 						<a href="<?=base_url()?>isibo/utubari"><i class="fas fa-glass-cheers" style="font-size:16px;color:#F17421;padding-left:0px"><span style="color:#000; padding-left:10px">Utubari<span></i>    </a>
 						<a href="<?=base_url()?>isibo/inganda"><i class="fas fa-industry" style="font-size:16px;color:blue;padding-left:0px"><span style="color:#000; padding-left:10px">Inganda<span></i>            </a>
 						<a href="<?=base_url()?>isibo/amasoko"><i class="fas fa-store" style="font-size:16px;color:#82C91E;padding-left:0px"><span style="color:#000; padding-left:10px">Amasoko<span></i>            </a>
-						<a href="<?=base_url()?>isibo/abashyitsi/amaduka"><i class="fas fa-store-alt" style="font-size:16px;color:blue;padding-left:0px"><span style="color:#000; padding-left:10px">Amaduka<span></i>           </a>
+						<a href="<?=base_url()?>isibo/amaduka"><i class="fas fa-store-alt" style="font-size:16px;color:blue;padding-left:0px"><span style="color:#000; padding-left:10px">Amaduka<span></i>           </a>
 						<a href="<?=base_url()?>isibo/cooperative"><i class="fas fa-store-alt" style="font-size:16px;color:blue;padding-left:0px"><span style="color:#000; padding-left:10px">cooperative<span></i>   </a>
 						<a href="<?=base_url()?>isibo/salon_de_coiffure"><i class="fas fa-store-alt" style="font-size:16px;color:blue;padding-left:0px"><span style="color:#000; padding-left:10px">Salon<span></i></a>
 						<a href="<?=base_url()?>isibo/amabanki"><i class="fas fa-store-alt" style="font-size:16px;color:blue;padding-left:0px"><span style="color:#000; padding-left:10px">Amabanki<span></i>   </a>
@@ -133,7 +133,7 @@
             <ul class="navbar-item flex-row navbar-dropdown" style="background-color:transparent; color:#000">
                 <li class="nav-item dropdown apps-dropdown more-dropdown md-hidden" style="background-color:#fff; color:#000">
                     <div class="dropdown  custom-dropdown-icon" style="background-color:transparent; color:#fff">
-                    <a class="btn btn-trans btn-icon  add-tooltip" style="color:black; background-color:#fff; box-shadow: none; margin:1px;" href="<?=base_url()?>isibo/amaduka" data-original-title="Add Photo" data-toggle="tooltip"><b style="font-family: Roboto, 'Segoe UI', Tahoma, sans-serif;"><span class="fas fa-store-alt" style="font-size:28px"></span> </b></a>
+                    <a class="btn btn-trans btn-icon  add-tooltip" style="color:black; background-color:#fff; box-shadow: none; margin:1px;" href="<?=base_url()?>isibo/amaduka" data-original-title="Reba Amaduka" data-toggle="tooltip"><b style="font-family: Roboto, 'Segoe UI', Tahoma, sans-serif;"><span class="fas fa-store-alt" style="font-size:28px"></span> </b></a>
                         <div class="dropdown-menu dropdown-menu-right" aria-labelledby="appSection">
 
                         </div>
@@ -161,7 +161,7 @@
                 </li>
             </ul>
 
-            <ul class="navbar-item flex-row navbar-dropdown" style="background-color:transparent; color:#000">
+            <!-- <ul class="navbar-item flex-row navbar-dropdown" style="background-color:transparent; color:#000">
                 <li class="nav-item dropdown apps-dropdown more-dropdown md-hidden" style="background-color:#fff; color:#000">
                     <div class="dropdown  custom-dropdown-icon" style="background-color:transparent; color:#fff">
                     <a class="btn btn-trans btn-icon add-tooltip" style="color:blue; background-color:#fff; box-shadow: none; margin:1px" href="<?=base_url()?>isibo/chat" data-original-title="Add Photo" data-toggle="tooltip"><b style="font-family: Roboto, 'Segoe UI', Tahoma, sans-serif;"><span class="fas fa-comment-alt" style="font-size:28px; font-weight:bold"></span> </b></a>
@@ -170,7 +170,7 @@
                         </div>
                     </div>
                 </li>
-            </ul>
+            </ul> -->
             <!-- <ul class="navbar-item flex-row navbar-dropdown" style="background-color:transparent; color:#000">
                 <li class="nav-item dropdown apps-dropdown more-dropdown md-hidden" style="background-color:#F0F0F0; color:#000">
                     <div class="dropdown  custom-dropdown-icon" style="background-color:transparent; color:#fff">
@@ -366,3 +366,4 @@
             </ul>
         </header>
     </div>
+

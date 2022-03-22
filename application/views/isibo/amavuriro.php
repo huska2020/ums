@@ -209,101 +209,30 @@
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr><td>1</td>
-                                        <td>Tiger Nixon</td>
-                                        <td>Kigali, Rwanda</td>
-                                        <td>Edinburgh</td>
-                                        <td>+250788498834</td>
-                                        <td class="text-center"><a href="<?=base_url()?>isibo/ibikorwaremezo"><button class="btn btn-primary btn-sm">View more</button></a> </td>
+                                  
+                                <?php
+                                if (is_array($data)) {
+                                  foreach ($data as $value) {
+                                    @$i++;
+                                    ?>
+                                    <tr><td><?=$i?></td>
+                                        <td><?=$value->ibi_name?></td>
+                                        <td><?=$value->village_name?></td>
+                                        <td><?=$value->ibi_category?></td>
+                                        <td><?=$value->ibi_contact?></td>
+                                        <td class="text-center"><a href="<?=base_url()?>isibo/ibikorwaremezo/<?=$value->ibi_id?>"><button class="btn btn-primary btn-sm">View more</button></a> </td>
                                     </tr>
-
-                                    <tr><td>1</td>
-                                        <td>Tiger Nixon</td>
-                                        <td>Kigali, Rwanda</td>
-                                        <td>Edinburgh</td>
-                                        <td>+250788498834</td>
-                                        <td class="text-center"><a href="<?=base_url()?>isibo/ibikorwaremezo"><button class="btn btn-primary btn-sm">View more</button></a> </td>
-                                    </tr>
-                                    <tr><td>1</td>
-                                        <td>Tiger Nixon</td>
-                                        <td>Kigali, Rwanda</td>
-                                        <td>Edinburgh</td>
-                                        <td>+250788498834</td>
-                                        <td class="text-center"><a href="<?=base_url()?>isibo/ibikorwaremezo"><button class="btn btn-primary btn-sm">View more</button></a> </td>
-                                    </tr> <tr><td>1</td>
-                                        <td>Tiger Nixon</td>
-                                        <td>Kigali, Rwanda</td>
-                                        <td>Edinburgh</td>
-                                        <td>+250788498834</td>
-                                        <td class="text-center"><a href="<?=base_url()?>isibo/ibikorwaremezo"><button class="btn btn-primary btn-sm">View more</button></a> </td>
-                                    </tr> <tr><td>1</td>
-                                        <td>Tiger Nixon</td>
-                                        <td>Kigali, Rwanda</td>
-                                        <td>Edinburgh</td>
-                                        <td>+250788498834</td>
-                                        <td class="text-center"><a href="<?=base_url()?>isibo/ibikorwaremezo"><button class="btn btn-primary btn-sm">View more</button></a> </td>
-                                    </tr> <tr><td>1</td>
-                                        <td>Tiger Nixon</td>
-                                        <td>Kigali, Rwanda</td>
-                                        <td>Edinburgh</td>
-                                        <td>+250788498834</td>
-                                        <td class="text-center"><a href="<?=base_url()?>isibo/ibikorwaremezo"><button class="btn btn-primary btn-sm">View more</button></a> </td>
-                                    </tr> <tr><td>1</td>
-                                        <td>Tiger Nixon</td>
-                                        <td>Kigali, Rwanda</td>
-                                        <td>Edinburgh</td>
-                                        <td>+250788498834</td>
-                                        <td class="text-center"><a href="<?=base_url()?>isibo/ibikorwaremezo"><button class="btn btn-primary btn-sm">View more</button></a> </td>
-                                    </tr> <tr><td>1</td>
-                                        <td>Tiger Nixon</td>
-                                        <td>Kigali, Rwanda</td>
-                                        <td>Edinburgh</td>
-                                        <td>+250788498834</td>
-                                        <td class="text-center"><a href="<?=base_url()?>isibo/ibikorwaremezo"><button class="btn btn-primary btn-sm">View more</button></a> </td>
-                                    </tr> <tr><td>1</td>
-                                        <td>Tiger Nixon</td>
-                                        <td>Kigali, Rwanda</td>
-                                        <td>Edinburgh</td>
-                                        <td>+250788498834</td>
-                                        <td class="text-center"><a href="<?=base_url()?>isibo/ibikorwaremezo"><button class="btn btn-primary btn-sm">View more</button></a> </td>
-                                    </tr> <tr><td>1</td>
-                                        <td>Tiger Nixon</td>
-                                        <td>Kigali, Rwanda</td>
-                                        <td>Edinburgh</td>
-                                        <td>+250788498834</td>
-                                        <td class="text-center"><a href="<?=base_url()?>isibo/ibikorwaremezo"><button class="btn btn-primary btn-sm">View more</button></a> </td>
-                                    </tr> <tr><td>1</td>
-                                        <td>Tiger Nixon</td>
-                                        <td>Kigali, Rwanda</td>
-                                        <td>Edinburgh</td>
-                                        <td>+250788498834</td>
-                                        <td class="text-center"><a href="<?=base_url()?>isibo/ibikorwaremezo"><button class="btn btn-primary btn-sm">View more</button></a> </td>
-                                    </tr> <tr><td>1</td>
-                                        <td>Tiger Nixon</td>
-                                        <td>Kigali, Rwanda</td>
-                                        <td>Edinburgh</td>
-                                        <td>+250788498834</td>
-                                        <td class="text-center"><a href="<?=base_url()?>isibo/ibikorwaremezo"><button class="btn btn-primary btn-sm">View more</button></a> </td>
-                                    </tr> <tr><td>1</td>
-                                        <td>Tiger Nixon</td>
-                                        <td>Kigali, Rwanda</td>
-                                        <td>Edinburgh</td>
-                                        <td>+250788498834</td>
-                                        <td class="text-center"><a href="<?=base_url()?>isibo/ibikorwaremezo"><button class="btn btn-primary btn-sm">View more</button></a> </td>
-                                    </tr> <tr><td>1</td>
-                                        <td>Tiger Nixon</td>
-                                        <td>Kigali, Rwanda</td>
-                                        <td>Edinburgh</td>
-                                        <td>+250788498834</td>
-                                        <td class="text-center"><a href="<?=base_url()?>isibo/ibikorwaremezo"><button class="btn btn-primary btn-sm">View more</button></a> </td>
-                                    </tr> <tr><td>1</td>
-                                        <td>Tiger Nixon</td>
-                                        <td>Kigali, Rwanda</td>
-                                        <td>Edinburgh</td>
-                                        <td>+250788498834</td>
-                                        <td class="text-center"><a href="<?=base_url()?>isibo/ibikorwaremezo"><button class="btn btn-primary btn-sm">View more</button></a> </td>
-                                    </tr>
-                                   
+                                    <?php
+                                  }
+                                }else {
+                                  ?>
+                                  <tr>
+                                    <td colspan="6">
+                                  <center>no data</center></td>
+                                  </tr>
+                                  <?php
+                                }
+                                  ?>                                    
                                 </tbody>
                                 <tfoot>
                                 <tr  style="background-color:#f1f1f1"><th>No</th>
