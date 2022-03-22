@@ -611,7 +611,7 @@ class Family extends CI_Controller {
             $amount =intval($amezi)*$amt;
         }
 
-        $email = "audasang2018@gmail.com";
+        $email = "huskajafar@gmail.com";
         if ($this->input->post('nber')){
             $amezi = $this->input->post('amezi');
             $transaction_reference = 'TRX'.time();
@@ -629,7 +629,7 @@ class Family extends CI_Controller {
                     'redirect_url' => base_url().'Family/process',
                     'customer' => [
                         'email' => $email,
-                        'name' => 'sanga'
+                        'name' => 'huska'
                     ],
                     'meta' => [
                         'price' => $amount
