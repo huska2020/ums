@@ -12,53 +12,41 @@
                         
 
                         <div class="privacy-content-container">
+                            <?php
+                            foreach ($data as $value) {
+                                ?>
 
-                            <section>
-                                <h5>AMAZINA Y'IGIKORWAREMEZO</h5>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
+                                <section>
+                                    <h5><?=$value->ibi_name?></h5> 
+                                    <?=$value->ibi_desc?>
+                            </section>
+    
+                                <section>
+                                    
+                                    <h5>Contact</h5>
+    
+                                    <p><?=$value->ibi_contact?></p>                                    
+                                </section>
+                                 <h5>AMAFOTO Y'IGIKORWAREMEZO</h5>
                                 <a class="img-2" data-author="Samuel Rohl">
-                                    <img src="<?=base_url()?>assets/assets/img/skl1.png" style="width:100%" alt="image-gallery">
-                                </a><br><br>
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-
-                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.</p>
-                            </section> <h5>AMAFOTO Y'IGIKORWAREMEZO</h5>
-                            <a class="img-2" data-author="Samuel Rohl">
-                                    <img src="<?=base_url()?>assets/assets/img/skl.jpg" style="width:100%" alt="image-gallery">
-                                    <figure>This is dummy caption. It has been placed here solely to demonstrate the look and feel of finished, typeset text.</figure>
-                                </a>
-                            <h5 class="policy-info-ques">What personal data we collect and why we collect it</h5>
-
-                            <section>
-                                
-                                <h5>Media</h5>
-
-                                <p>If you upload images to the website, you should avoid uploading images with embedded location data (EXIF GPS) included. Visitors to the website can download and extract any location data from images on the website.</p>
-                            </section>
-
-                            <section>
-
-                                <h5> Cookies </h5>
-
-                                <p> If you leave a comment on our site you may opt-in to saving your name, email address and website in cookies. These are for your convenience so that you do not have to fill in your details again when you leave another comment. These cookies will last for one year.</p>
-
-                                <p> If you have an account and you log in to this site, we will set a temporary cookie to determine if your browser accepts cookies. This cookie contains no personal data and is discarded when you close your browser.</p>
-
-                                <p> When you log in, we will also set up several cookies to save your login information and your screen display choices. Login cookies last for two days, and screen options cookies last for a year. If you select “Remember Me”, your login will persist for two weeks. If you log out of your account, the login cookies will be removed.</p>
-
-                                <p> If you edit or publish an article, an additional cookie will be saved in your browser. This cookie includes no personal data and simply indicates the post ID of the article you just edited. It expires after 1 day.</p>
-
-                            </section>
-                                
-                            <section>
-                                <h5> Embedded content from other websites.</h5>
-
-                                <p> Articles on this site may include embedded content (e.g. videos, images, articles, etc.). Embedded content from other websites behaves in the exact same way as if the visitor has visited the other website.</p>
-
-                                <p> These websites may collect data about you, use cookies, embed additional third-party tracking, and monitor your interaction with that embedded content, including tracking your interaction with the embedded content if you have an account and are logged in to that website.</p>
-                            </section>
+                                    <?php
+                                    if (is_array($pic)) {
+                                        
+                                    foreach ($pic as $key) {
+                                        ?>
+                                        <img src="<?=base_url()?><?=$key->ibi_file_image?>" style="width:100%" alt="image-gallery">
+                                        <?php
+                                    }
+                                    }else {
+                                        ?>
+                                        <center><h4>Nta Foto  zihari</h4></center>
+                                        <?php
+                                    }
+                                    ?>
+                                    </a>
+                                <?php
+                            }
+                            ?>
 
                         </div>
 

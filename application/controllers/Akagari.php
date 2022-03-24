@@ -2,12 +2,34 @@
 defined('BASEPATH') OR exit('No direct script access allowed');
 
 
-class Akagari extends CI_Controller {
+class Akagari extends CI_Controller { 
+
+	public function __construct()
+	{
+		//call CodeIgniter's default Constructor
+		parent::__construct();
+
+		//load database libray manually
+		$this->load->database();
+
+		//load Model
+		$this->load->model('Mod_Akagari');
+		//load session library
+		$this->load->library('session');
+
+		$this->load->helper(array('form', 'url'));
+	}
+	
 	public function index(){
-		$this->load->view('akagari/header');
-		$this->load->view('akagari/sidebar');
-		$this->load->view('akagari/index');
-		$this->load->view('akagari/footer');
+		$sessionData=$this->session->userdata('userid');
+		if($sessionData!="") {
+			$this->load->view('akagari/header');
+			$this->load->view('akagari/sidebar');
+			$this->load->view('akagari/index');
+			$this->load->view('akagari/footer');
+		}else {
+			redirect(base_url() . 'Login');
+		}
 	}
 
 	public function abashyitsi(){

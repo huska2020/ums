@@ -49,6 +49,22 @@ class Mod_Isibo extends CI_Model
 		$this->db->insert('ums_members', $data1);
 	}
 
+	function saveIgikorwa($name, $vill, $cont, $desc, $cat, $owner){
+		$data = array(
+			'ibi_id' =>null,
+			'ibi_name' => $name,
+			'ibi_village' => $vill, 
+			'ibi_contact' => $cont,
+			'ibi_desc' => $desc,
+			'ibi_category' => $cat,
+			'ibi_owner' => $owner,
+		);
+
+		$this->db->insert('ums_ibikorwa_doc', $data);
+
+		$this->DBNAME = $this->db->insert_id();
+	}
+
 	function registerMember($fname, $lname, $tel, $nid,$email,$dob, $isano, $sex, $id,$ins){
 
 		$data = array(
@@ -66,6 +82,18 @@ class Mod_Isibo extends CI_Model
 		);
 
 		$this->db->insert('ums_members', $data);
+
+	}
+
+	function saveFile($id, $pic){
+
+		$data = array(
+			'ibi_file_id' =>null,
+			'ibi_file_igikorwa' => $id,
+			'ibi_file_image' => $pic
+		);
+
+		$this->db->insert('ums_ibikorwa_doc_file', $data);
 
 	}
 
@@ -242,6 +270,56 @@ class Mod_Isibo extends CI_Model
 		$this->db->from('ums_leaders');
 		$this->db->join('ums_category', 'ldr_category_code=cat_cotegory_code');
 		$this->db->join('ums_ubwishingizi', 'ldr_insurance=ubw_id');
+
+		$query = $this->db->get();
+
+		if ($query->num_rows()>0){
+			return $query->result();
+		}
+		else{
+			return false;
+		}
+	}
+
+	function amashuri($id, $cat)
+	{
+		$this->db->select('*');
+		$this->db->from('ums_ibikorwa_doc');
+		$this->db->join('ums_village', 'ibi_village=village_code');
+		$this->db->where('village_code', $id);
+		$this->db->where('ibi_category', $cat);
+
+		$query = $this->db->get();
+
+		if ($query->num_rows()>0){
+			return $query->result();
+		}
+		else{
+			return false;
+		}
+	}
+
+	function igikorwa($id)
+	{
+		$this->db->select('*');
+		$this->db->from('ums_ibikorwa_doc');
+		$this->db->join('ums_village', 'ibi_village=village_code');
+		$this->db->where('ibi_id', $id);
+
+		$query = $this->db->get();
+
+		if ($query->num_rows()>0){
+			return $query->result();
+		}
+		else{
+			return false;
+		}
+	}
+	function igikorwapic($id)
+	{
+		$this->db->select('*');
+		$this->db->from('ums_ibikorwa_doc_file');
+		$this->db->where('ibi_file_igikorwa', $id);
 
 		$query = $this->db->get();
 
